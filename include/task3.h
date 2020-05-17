@@ -112,8 +112,9 @@ public:
 
 void task3(){
     Shop shop;
-    for (auto i = 0 ; i < 50; i++){
+    for (auto i = 0 ; i < 100; i++){
         shop.NewCustomer(new Customer(5));
+        this_thread::sleep_for(chrono::milliseconds(random() % 3000));
     }
     getchar();
 }
