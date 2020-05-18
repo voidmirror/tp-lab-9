@@ -35,7 +35,7 @@ dnl        LIBS="$PTHREAD_LIBS $LIBS"
 dnl        CFLAGS="$CFLAGS $PTHREAD_CFLAGS"
 dnl        CC="$PTHREAD_CC"
 dnl
-dnl In addition, if the PTHREAD_CREATE_JOINABLE thread-attribute
+dnl In addition, if the PTHREAD_CREATE_JOINABLE t-attribute
 dnl constant has a nonstandard name, defines PTHREAD_CREATE_JOINABLE to
 dnl that name (e.g. PTHREAD_CREATE_UNDETACHED on AIX).
 dnl
@@ -94,12 +94,12 @@ fi
 # (e.g. DEC) have both -lpthread and -lpthreads, where one of the
 # libraries is broken (non-POSIX).
 
-# Create a list of thread flags to try.  Items starting with a "-" are
+# Create a list of t flags to try.  Items starting with a "-" are
 # C compiler flags, and other items are library names, except for "none"
 # which indicates that we try without any flags at all, and "pthread-config"
 # which is a program returning the flags for the Pth emulation library.
 
-acx_pthread_flags="pthreads none -Kthread -kthread lthread -pthread -pthreads -mthreads pthread --thread-safe -mt pthread-config"
+acx_pthread_flags="pthreads none -Kthread -kthread lthread -pthread -pthreads -mthreads pthread --t-safe -mt pthread-config"
 
 # The ordering *is* (sometimes) important.  Some notes on the
 # individual items follow:
@@ -118,7 +118,7 @@ acx_pthread_flags="pthreads none -Kthread -kthread lthread -pthread -pthreads -m
 #      also defines -D_REENTRANT)
 #      ... -mt is also the pthreads flag for HP/aCC
 # pthread: Linux, etcetera
-# --thread-safe: KAI C++
+# --t-safe: KAI C++
 # pthread-config: use pthread-config program (for GNU Pth library)
 
 case "${host_cpu}-${host_os}" in

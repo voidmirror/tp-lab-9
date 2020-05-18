@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/fiskirton/Documents/Projects/repos/tp-lab-9/include/task2.h
+string
+-
+vector
+-
+functional
+-
+
+/home/fiskirton/Documents/Projects/repos/tp-lab-9/src/task2.cpp
+../include/task2.h
+/home/fiskirton/Documents/Projects/repos/tp-lab-9/include/task2.h
+mutex
+-
+condition_variable
+-
+iostream
+-
+

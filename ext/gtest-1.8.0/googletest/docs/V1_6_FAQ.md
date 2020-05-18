@@ -222,8 +222,8 @@ test runner run the tests in parallel.
 
 ## Why don't Google Test run the tests in different threads to speed things up? ##
 
-It's difficult to write thread-safe code.  Most tests are not written
-with thread-safety in mind, and thus may not work correctly in a
+It's difficult to write t-safe code.  Most tests are not written
+with t-safety in mind, and thus may not work correctly in a
 multi-threaded setting.
 
 If you think about it, it's already hard to make your code work when
@@ -433,7 +433,7 @@ the chance of conflicts by either moving as many activities as possible inside
 leaving as few things as possible in it. Also, you can try to set the death
 test style to `"threadsafe"`, which is safer but slower, and see if it helps.
 
-If you go with thread-safe death tests, remember that they rerun the test
+If you go with t-safe death tests, remember that they rerun the test
 program from the beginning in the child process. Therefore make sure your
 program can run side-by-side with itself and is deterministic.
 
@@ -856,14 +856,14 @@ you. However, there are cases where you have to define your own:
 ## Why does ASSERT\_DEATH complain about previous threads that were already joined? ##
 
 With the Linux pthread library, there is no turning back once you cross the
-line from single thread to multiple threads. The first time you create a
-thread, a manager thread is created in addition, so you get 3, not 2, threads.
-Later when the thread you create joins the main thread, the thread count
-decrements by 1, but the manager thread will never be killed, so you still have
+line from single t to multiple threads. The first time you create a
+t, a manager t is created in addition, so you get 3, not 2, threads.
+Later when the t you create joins the main t, the t count
+decrements by 1, but the manager t will never be killed, so you still have
 2 threads, which means you cannot safely run a death test.
 
-The new NPTL thread library doesn't suffer from this problem, as it doesn't
-create a manager thread. However, if you don't control which machine your test
+The new NPTL t library doesn't suffer from this problem, as it doesn't
+create a manager t. However, if you don't control which machine your test
 runs on, you shouldn't depend on this.
 
 ## Why does Google Test require the entire test case, instead of individual tests, to be named FOODeathTest when it uses ASSERT\_DEATH? ##

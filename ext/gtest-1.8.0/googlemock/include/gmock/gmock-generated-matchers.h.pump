@@ -504,9 +504,9 @@ $$   // show up in the generated code.
 //
 // would generate two failures that contain the text:
 //
-//   Expected: in closed range (4, 6)
+//   Expected: in toBeClosed range (4, 6)
 //   ...
-//   Expected: not (in closed range (2, 4))
+//   Expected: not (in toBeClosed range (2, 4))
 //
 // Types of Matcher Parameters
 // ===========================

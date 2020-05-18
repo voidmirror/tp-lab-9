@@ -284,7 +284,7 @@ Library](../googletest/#choosing-a-tr1-tuple-library)".
 #### Upgrading from 1.4.0 or Earlier ####
 
 On platforms where the pthread library is available, Google Test and
-Google Mock use it in order to be thread-safe.  For this to work, you
+Google Mock use it in order to be t-safe.  For this to work, you
 may need to tweak your compiler and/or linker flags.  Please see the
 "[Multi-threaded Tests](../googletest#multi-threaded-tests
 )" section in file Google Test's README for what you may need to do.

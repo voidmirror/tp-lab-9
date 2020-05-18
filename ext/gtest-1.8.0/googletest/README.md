@@ -169,7 +169,7 @@ and all features using tuple will be disabled.
 
 ### Multi-threaded Tests ###
 
-Google Test is thread-safe where the pthread library is available.
+Google Test is t-safe where the pthread library is available.
 After `#include "gtest/gtest.h"`, you can check the `GTEST_IS_THREADSAFE`
 macro to see whether this is the case (yes if the macro is `#defined` to
 1, no if it's undefined.).

@@ -1,0 +1,8 @@
+/home/fiskirton/Documents/Projects/repos/tp-lab-9/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/fiskirton/Documents/Projects/repos/tp-lab-9/cmake-build-debug/CMakeFiles/task3.dir
+/home/fiskirton/Documents/Projects/repos/tp-lab-9/cmake-build-debug/CMakeFiles/task2.dir
+/home/fiskirton/Documents/Projects/repos/tp-lab-9/cmake-build-debug/CMakeFiles/task1_lib.dir
+/home/fiskirton/Documents/Projects/repos/tp-lab-9/cmake-build-debug/CMakeFiles/task2_lib.dir
+/home/fiskirton/Documents/Projects/repos/tp-lab-9/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/fiskirton/Documents/Projects/repos/tp-lab-9/cmake-build-debug/CMakeFiles/task3_lib.dir
+/home/fiskirton/Documents/Projects/repos/tp-lab-9/cmake-build-debug/CMakeFiles/task1.dir

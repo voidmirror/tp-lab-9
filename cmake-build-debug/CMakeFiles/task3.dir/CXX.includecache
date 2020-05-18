@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/task3.h
+vector
+-
+string
+-
+thread
+-
+deque
+-
+stack
+-
+mutex
+-
+condition_variable
+-
+
+/home/fiskirton/Documents/Projects/repos/tp-lab-9/src/main3.cpp
+task3.h
+/home/fiskirton/Documents/Projects/repos/tp-lab-9/src/task3.h
+

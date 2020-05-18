@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="funcs-threads"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/fiskirton/Documents/Projects/repos/tp-lab-9/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/fiskirton/Documents/Projects/repos/tp-lab-9/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/fiskirton/Documents/Projects/repos/tp-lab-9/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/fiskirton/Documents/Projects/repos/tp-lab-9/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/fiskirton/Documents/Projects/repos/tp-lab-9/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/fiskirton/Documents/Projects/repos/tp-lab-9/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/fiskirton/Documents/Projects/repos/tp-lab-9/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/fiskirton/Documents/Projects/repos/tp-lab-9/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/fiskirton/Documents/Projects/repos/tp-lab-9/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/fiskirton/Documents/Projects/repos/tp-lab-9/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="task3">
+				<Option output="/home/fiskirton/Documents/Projects/repos/tp-lab-9/cmake-build-debug/task3" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/fiskirton/Documents/Projects/repos/tp-lab-9/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/fiskirton/Documents/Projects/repos/tp-lab-9/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.3.0/../../../../include/c++/9.3.0"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.3.0/../../../../include/c++/9.3.0/x86_64-pc-linux-gnu"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.3.0/../../../../include/c++/9.3.0/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.3.0/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.3.0/include-fixed"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/fiskirton/Documents/Projects/repos/tp-lab-9/cmake-build-debug/Makefile&quot;  VERBOSE=1 task3"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/fiskirton/Documents/Projects/repos/tp-lab-9/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/fiskirton/Documents/Projects/repos/tp-lab-9/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/fiskirton/Documents/Projects/repos/tp-lab-9/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="task3/fast">
+				<Option output="/home/fiskirton/Documents/Projects/repos/tp-lab-9/cmake-build-debug/task3" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/fiskirton/Documents/Projects/repos/tp-lab-9/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/fiskirton/Documents/Projects/repos/tp-lab-9/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.3.0/../../../../include/c++/9.3.0"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.3.0/../../../../include/c++/9.3.0/x86_64-pc-linux-gnu"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.3.0/../../../../include/c++/9.3.0/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.3.0/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.3.0/include-fixed"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/fiskirton/Documents/Projects/repos/tp-lab-9/cmake-build-debug/Makefile&quot;  VERBOSE=1 task3/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/fiskirton/Documents/Projects/repos/tp-lab-9/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/fiskirton/Documents/Projects/repos/tp-lab-9/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/fiskirton/Documents/Projects/repos/tp-lab-9/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="task2">
+				<Option output="/home/fiskirton/Documents/Projects/repos/tp-lab-9/cmake-build-debug/task2" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/fiskirton/Documents/Projects/repos/tp-lab-9/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/fiskirton/Documents/Projects/repos/tp-lab-9/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.3.0/../../../../include/c++/9.3.0"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.3.0/../../../../include/c++/9.3.0/x86_64-pc-linux-gnu"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.3.0/../../../../include/c++/9.3.0/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.3.0/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.3.0/include-fixed"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/fiskirton/Documents/Projects/repos/tp-lab-9/cmake-build-debug/Makefile&quot;  VERBOSE=1 task2"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/fiskirton/Documents/Projects/repos/tp-lab-9/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/fiskirton/Documents/Projects/repos/tp-lab-9/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/fiskirton/Documents/Projects/repos/tp-lab-9/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="task2/fast">
+				<Option output="/home/fiskirton/Documents/Projects/repos/tp-lab-9/cmake-build-debug/task2" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/fiskirton/Documents/Projects/repos/tp-lab-9/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/fiskirton/Documents/Projects/repos/tp-lab-9/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.3.0/../../../../include/c++/9.3.0"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.3.0/../../../../include/c++/9.3.0/x86_64-pc-linux-gnu"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.3.0/../../../../include/c++/9.3.0/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.3.0/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.3.0/include-fixed"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/fiskirton/Documents/Projects/repos/tp-lab-9/cmake-build-debug/Makefile&quot;  VERBOSE=1 task2/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/fiskirton/Documents/Projects/repos/tp-lab-9/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/fiskirton/Documents/Projects/repos/tp-lab-9/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/fiskirton/Documents/Projects/repos/tp-lab-9/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="task1_lib">
+				<Option output="/home/fiskirton/Documents/Projects/repos/tp-lab-9/cmake-build-debug/libtask1_lib.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/fiskirton/Documents/Projects/repos/tp-lab-9/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/fiskirton/Documents/Projects/repos/tp-lab-9/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.3.0/../../../../include/c++/9.3.0"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.3.0/../../../../include/c++/9.3.0/x86_64-pc-linux-gnu"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.3.0/../../../../include/c++/9.3.0/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.3.0/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.3.0/include-fixed"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/fiskirton/Documents/Projects/repos/tp-lab-9/cmake-build-debug/Makefile&quot;  VERBOSE=1 task1_lib"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/fiskirton/Documents/Projects/repos/tp-lab-9/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/fiskirton/Documents/Projects/repos/tp-lab-9/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/fiskirton/Documents/Projects/repos/tp-lab-9/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="task1_lib/fast">
+				<Option output="/home/fiskirton/Documents/Projects/repos/tp-lab-9/cmake-build-debug/libtask1_lib.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/fiskirton/Documents/Projects/repos/tp-lab-9/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/fiskirton/Documents/Projects/repos/tp-lab-9/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.3.0/../../../../include/c++/9.3.0"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.3.0/../../../../include/c++/9.3.0/x86_64-pc-linux-gnu"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.3.0/../../../../include/c++/9.3.0/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.3.0/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.3.0/include-fixed"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/fiskirton/Documents/Projects/repos/tp-lab-9/cmake-build-debug/Makefile&quot;  VERBOSE=1 task1_lib/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/fiskirton/Documents/Projects/repos/tp-lab-9/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/fiskirton/Documents/Projects/repos/tp-lab-9/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/fiskirton/Documents/Projects/repos/tp-lab-9/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="task2_lib">
+				<Option output="/home/fiskirton/Documents/Projects/repos/tp-lab-9/cmake-build-debug/libtask2_lib.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/fiskirton/Documents/Projects/repos/tp-lab-9/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/fiskirton/Documents/Projects/repos/tp-lab-9/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.3.0/../../../../include/c++/9.3.0"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.3.0/../../../../include/c++/9.3.0/x86_64-pc-linux-gnu"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.3.0/../../../../include/c++/9.3.0/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.3.0/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.3.0/include-fixed"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/fiskirton/Documents/Projects/repos/tp-lab-9/cmake-build-debug/Makefile&quot;  VERBOSE=1 task2_lib"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/fiskirton/Documents/Projects/repos/tp-lab-9/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/fiskirton/Documents/Projects/repos/tp-lab-9/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/fiskirton/Documents/Projects/repos/tp-lab-9/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="task2_lib/fast">
+				<Option output="/home/fiskirton/Documents/Projects/repos/tp-lab-9/cmake-build-debug/libtask2_lib.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/fiskirton/Documents/Projects/repos/tp-lab-9/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/fiskirton/Documents/Projects/repos/tp-lab-9/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.3.0/../../../../include/c++/9.3.0"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.3.0/../../../../include/c++/9.3.0/x86_64-pc-linux-gnu"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.3.0/../../../../include/c++/9.3.0/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.3.0/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.3.0/include-fixed"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/fiskirton/Documents/Projects/repos/tp-lab-9/cmake-build-debug/Makefile&quot;  VERBOSE=1 task2_lib/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/fiskirton/Documents/Projects/repos/tp-lab-9/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/fiskirton/Documents/Projects/repos/tp-lab-9/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/fiskirton/Documents/Projects/repos/tp-lab-9/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/fiskirton/Documents/Projects/repos/tp-lab-9/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/fiskirton/Documents/Projects/repos/tp-lab-9/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/fiskirton/Documents/Projects/repos/tp-lab-9/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/fiskirton/Documents/Projects/repos/tp-lab-9/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/fiskirton/Documents/Projects/repos/tp-lab-9/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="task3_lib">
+				<Option output="/home/fiskirton/Documents/Projects/repos/tp-lab-9/cmake-build-debug/libtask3_lib.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/fiskirton/Documents/Projects/repos/tp-lab-9/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/fiskirton/Documents/Projects/repos/tp-lab-9/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.3.0/../../../../include/c++/9.3.0"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.3.0/../../../../include/c++/9.3.0/x86_64-pc-linux-gnu"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.3.0/../../../../include/c++/9.3.0/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.3.0/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.3.0/include-fixed"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/fiskirton/Documents/Projects/repos/tp-lab-9/cmake-build-debug/Makefile&quot;  VERBOSE=1 task3_lib"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/fiskirton/Documents/Projects/repos/tp-lab-9/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/fiskirton/Documents/Projects/repos/tp-lab-9/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/fiskirton/Documents/Projects/repos/tp-lab-9/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="task3_lib/fast">
+				<Option output="/home/fiskirton/Documents/Projects/repos/tp-lab-9/cmake-build-debug/libtask3_lib.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/fiskirton/Documents/Projects/repos/tp-lab-9/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/fiskirton/Documents/Projects/repos/tp-lab-9/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.3.0/../../../../include/c++/9.3.0"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.3.0/../../../../include/c++/9.3.0/x86_64-pc-linux-gnu"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.3.0/../../../../include/c++/9.3.0/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.3.0/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.3.0/include-fixed"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/fiskirton/Documents/Projects/repos/tp-lab-9/cmake-build-debug/Makefile&quot;  VERBOSE=1 task3_lib/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/fiskirton/Documents/Projects/repos/tp-lab-9/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/fiskirton/Documents/Projects/repos/tp-lab-9/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/fiskirton/Documents/Projects/repos/tp-lab-9/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="task1">
+				<Option output="/home/fiskirton/Documents/Projects/repos/tp-lab-9/cmake-build-debug/task1" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/fiskirton/Documents/Projects/repos/tp-lab-9/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/fiskirton/Documents/Projects/repos/tp-lab-9/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.3.0/../../../../include/c++/9.3.0"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.3.0/../../../../include/c++/9.3.0/x86_64-pc-linux-gnu"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.3.0/../../../../include/c++/9.3.0/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.3.0/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.3.0/include-fixed"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/fiskirton/Documents/Projects/repos/tp-lab-9/cmake-build-debug/Makefile&quot;  VERBOSE=1 task1"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/fiskirton/Documents/Projects/repos/tp-lab-9/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/fiskirton/Documents/Projects/repos/tp-lab-9/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/fiskirton/Documents/Projects/repos/tp-lab-9/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="task1/fast">
+				<Option output="/home/fiskirton/Documents/Projects/repos/tp-lab-9/cmake-build-debug/task1" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/fiskirton/Documents/Projects/repos/tp-lab-9/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/fiskirton/Documents/Projects/repos/tp-lab-9/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.3.0/../../../../include/c++/9.3.0"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.3.0/../../../../include/c++/9.3.0/x86_64-pc-linux-gnu"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.3.0/../../../../include/c++/9.3.0/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.3.0/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.3.0/include-fixed"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/fiskirton/Documents/Projects/repos/tp-lab-9/cmake-build-debug/Makefile&quot;  VERBOSE=1 task1/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/fiskirton/Documents/Projects/repos/tp-lab-9/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/fiskirton/Documents/Projects/repos/tp-lab-9/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/fiskirton/Documents/Projects/repos/tp-lab-9/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/fiskirton/Documents/Projects/repos/tp-lab-9/include/task1.h">
+			<Option target="task1_lib"/>
+		</Unit>
+		<Unit filename="/home/fiskirton/Documents/Projects/repos/tp-lab-9/include/task2.h">
+			<Option target="task1_lib"/>
+		</Unit>
+		<Unit filename="/home/fiskirton/Documents/Projects/repos/tp-lab-9/include/task3.h">
+			<Option target="task1_lib"/>
+		</Unit>
+		<Unit filename="/home/fiskirton/Documents/Projects/repos/tp-lab-9/src/main1.cpp">
+			<Option target="task1_lib"/>
+			<Option target="task1"/>
+		</Unit>
+		<Unit filename="/home/fiskirton/Documents/Projects/repos/tp-lab-9/src/main2.cpp">
+			<Option target="task2"/>
+			<Option target="task1_lib"/>
+		</Unit>
+		<Unit filename="/home/fiskirton/Documents/Projects/repos/tp-lab-9/src/main3.cpp">
+			<Option target="task3"/>
+			<Option target="task1_lib"/>
+		</Unit>
+		<Unit filename="/home/fiskirton/Documents/Projects/repos/tp-lab-9/src/task1.cpp">
+			<Option target="task1_lib"/>
+		</Unit>
+		<Unit filename="/home/fiskirton/Documents/Projects/repos/tp-lab-9/src/task2.cpp">
+			<Option target="task1_lib"/>
+			<Option target="task2_lib"/>
+		</Unit>
+		<Unit filename="/home/fiskirton/Documents/Projects/repos/tp-lab-9/src/task3.cpp">
+			<Option target="task1_lib"/>
+			<Option target="task3_lib"/>
+		</Unit>
+		<Unit filename="/home/fiskirton/Documents/Projects/repos/tp-lab-9/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
