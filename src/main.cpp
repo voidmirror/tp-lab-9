@@ -1,4 +1,4 @@
-#define TASK 2
+#define TASK 3
 
 #if TASK == 1
 
@@ -51,7 +51,7 @@ int main()
     return 0;
 }
 
-#else if TASK == 2
+#elif TASK == 2
 
 #include "task2.h"
 
@@ -79,6 +79,46 @@ int main()
     }
 
     thread.join();
+
+    return 0;
+}
+
+#elif TASK == 3
+
+#include "task3.h"
+
+int main()
+{
+    size_t customerNum = 13;
+    size_t maxQueueLength = 5;
+    size_t n = 0;
+    std::vector<std::thread*> threads;
+    std::queue<Customer*> customer_queue;
+    
+    for (size_t i = 0; i < customerNum; i++)
+    {
+        //std::cout<<i<<std::endl;
+        customer_queue.push(new Customer());
+        if (customer_queue.size() % maxQueueLength == 0 || i == customerNum - 1)
+        {
+            //std::cout<<i<< " "<< customer_queue.size()<< " " << threads.size()<<std::endl;
+            n = threads.size();
+            threads.push_back(new std::thread( service, std::ref(customer_queue), n ));
+            //while (!customer_queue.empty())
+            //{
+            //   customer_queue.pop();
+            //}
+            
+        }
+    }
+
+    std::cout<< threads.size()<<std::endl;
+    
+    for (auto &th : threads)
+    {
+       std::cout<<" <<====>> "<<std::endl;
+        th->join();
+    }
 
     return 0;
 }
