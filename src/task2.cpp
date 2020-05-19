@@ -1,5 +1,9 @@
 #include "task2.h"
 
+bool resume = true;
+bool print = true;
+std::mutex mutex;
+
 void sort(std::vector<std::string> &var,  bool comp(const std::string a, const std::string b))
 {
     for (size_t i = 0; i < var.size()-1; i++)
