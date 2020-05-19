@@ -6,10 +6,11 @@
 #include <vector>
 #include <mutex>
 #include <string>
+#include <algorithm>
 
-std::mutex mutex;
-bool resume = true;
-bool print = true;
+extern std::mutex mutex;
+extern bool resume; // = true;
+extern bool print;  // = true;
 
 void sort(std::vector<std::string> &var,  bool comp(const std::string a, const std::string b));
 
