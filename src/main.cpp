@@ -97,17 +97,16 @@ int main()
     
     for (size_t i = 0; i < customerNum; i++)
     {
-        //std::cout<<i<<std::endl;
         customer_queue.push(new Customer());
         if (customer_queue.size() % maxQueueLength == 0 || i == customerNum - 1)
         {
-            //std::cout<<i<< " "<< customer_queue.size()<< " " << threads.size()<<std::endl;
             n = threads.size();
-            threads.push_back(new std::thread( service, std::ref(customer_queue), n ));
-            //while (!customer_queue.empty())
-            //{
-            //   customer_queue.pop();
-            //}
+            threads.push_back(new std::thread( service, customer_queue, n ));
+            
+            while (!customer_queue.empty())
+            {
+               customer_queue.pop();
+            }
             
         }
     }
