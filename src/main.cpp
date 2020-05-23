@@ -9,6 +9,9 @@
 #include <iostream>
 #include "task1.h"
 #include "task2.h"
+#include "task3.h"
+
+#define MAX_CURSTOMERS 30
 
 using namespace std;
 
@@ -41,7 +44,7 @@ int main(int argc, const char * argv[]) {
     
     res = array;
     flagDone = false;
-    thread th(bubbleSortThreaded, std::ref(res), [](string a, string b){ return a > b ? true : false;});
+    thread th(bubbleSortThreaded, ref(res), [](string a, string b){ return a > b ? true : false;});
     while(!flagDone){
         if (flagPrint){
             mtx.lock();
@@ -52,4 +55,23 @@ int main(int argc, const char * argv[]) {
     }
     th.join();
     
+    // task 2
+    
+    cout << endl << " ============= TASK 3 ============= " << endl << endl;
+    
+    vector<thread*> threads;
+    queue<Customer*> customers;
+    for (int i = 0; i < MAX_CURSTOMERS; i++) {
+        Customer* customer = new Customer(i);
+        customers.push(customer);
+        if (customers.size() % MAX_CUSTOMER_NUM == 0 || i == MAX_CURSTOMERS - 1){
+            threads.push_back(new thread(checkout, customers, threads.size()));
+            while (!customers.empty()){
+               customers.pop();
+            }
+        }
+    }
+    for (auto &th : threads) {
+        th->join();
+    }
 }
