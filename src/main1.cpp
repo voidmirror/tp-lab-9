@@ -34,5 +34,5 @@ int main() {
         return a < b;
     });
     std::cout << s;
-
+    return 0;
 }
