@@ -11,6 +11,7 @@ const std::size_t queueMaxLen = 5;
 const std::size_t countOfCustomers = 11;
 
 std::mutex mtx;
+std::mutex new_customer_mtx;
 std::condition_variable cv;
 
 struct Customer {
@@ -19,7 +20,7 @@ struct Customer {
 		std::size_t n = rand() % 20 + 1;
 		for (std::size_t i = 1; i <= n; i++)
 			products.push_back(rand() % 6 + 1);
-		
+
 	}
 	std::size_t numOfCustomer;
 	std::vector<std::size_t> products;
@@ -34,19 +35,24 @@ void serviceCustomers(std::queue<Customer*>*, int);
 void addNewCustomers() {
 	std::size_t numOfCashier = 1;
 	for (std::size_t i = 1; i <= countOfCustomers; i++) {
-		bool added = false;
-		for (std::queue<Customer*>* x : allQueues)
-			if (x->size() < queueMaxLen) {
-				x->push(new Customer(i));
-				added = true;
+		{
+			bool added = false;
+			std::lock_guard<std::mutex> lg(new_customer_mtx);
+			for (std::queue<Customer*>* x : allQueues)
+				if (x->size() < queueMaxLen) {
+					x->push(new Customer(i));
+					added = true;
+				}
+			if (!added) {
+				std::queue<Customer*>* newQueue = new std::queue<Customer*>();
+				newQueue->push(new Customer(i));
+				allQueues.push_back(newQueue);
+				std::thread* t = new std::thread(serviceCustomers, newQueue, numOfCashier++);
+				allThreads.push_back(t);
 			}
-		if (!added) {
-			std::queue<Customer*>* newQueue = new std::queue<Customer*>();
-			newQueue->push(new Customer(i));
-			allQueues.push_back(newQueue);
-			std::thread* t = new std::thread(serviceCustomers, newQueue, numOfCashier++);
-			allThreads.push_back(t);
 		}
+		std::this_thread::sleep_for(std::chrono::milliseconds(100));
+
 	}
 	for (auto x : allThreads)
 		x->join();
@@ -55,7 +61,6 @@ void addNewCustomers() {
 void serviceCustomers(std::queue<Customer*>* customers, int numOfCashier) {
 	while (!customers->empty()) {
 		Customer* customer = customers->front();
-		customers->pop();
 		for (std::size_t i = 0; i < customer->products.size(); i++) {
 			{
 				std::lock_guard<std::mutex> lg(mtx);
@@ -68,7 +73,14 @@ void serviceCustomers(std::queue<Customer*>* customers, int numOfCashier) {
 			std::lock_guard<std::mutex> lg(mtx);
 			std::cout << "Cashier #" << numOfCashier << " served customer #" << customer->numOfCustomer << std::endl;
 		}
+		customers->pop();
+		delete customer;
 	}
+
+	std::lock_guard<std::mutex> lg(new_customer_mtx);
+	allQueues.erase(std::find(allQueues.begin(), allQueues.end(), customers));
+	delete customers;
+
 }
 
 int main() {
@@ -77,4 +89,4 @@ int main() {
 	addNewCustomers();
 
 	return 0;
-}
+}	
