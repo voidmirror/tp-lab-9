@@ -17,7 +17,7 @@ void bubbleSort(vector<t>& a, t2 comparator) {
 
 
 
-int main1() {
+int main() {
     vector <int> ints = { 6, 7, 4, 1, 10, 5, 20, 2, 32 };
     vector <double> doubles = { 2.2, 3.3, 1.0, 4.1, 4.0, 6.2, 5.5, 1.6, 9.4, 9.3, 11.1 };
     vector <string> strings = { "qwe", "qweewewq", "qwwweeeqqw", "we", "weqq", "qqqqq","q", "wwweee" };

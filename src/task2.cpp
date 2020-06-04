@@ -38,7 +38,7 @@ void bubbleSort(vector<string>& a, bool comparator(string a, string b)) {
 	cv.notify_all();
 }
 
-int main2() {
+int main() {
 vector<string>strings = { "qwer", "qw", "qwerty", "q", "qwe", "qwert", "trewqyueq", "qweerte" };
 thread sortThread(bubbleSort, ref(strings), [](string a, string b) {return b.size() > a.size(); });
 while (true) {
