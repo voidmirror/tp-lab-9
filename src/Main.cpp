@@ -1,5 +1,6 @@
 // #define _TASK_1_MAIN_
-#define _TASK_2_MAIN_
+// #define _TASK_2_MAIN_
+#define _TASK_3_MAIN_
 
 #ifdef _TASK_1_MAIN_
 
@@ -117,3 +118,130 @@ int32_t main()
 }
 
 #endif // _TASK_2_MAIN_
+
+#ifdef _TASK_3_MAIN_
+
+#include <algorithm>
+#include <condition_variable>
+#include <cstdint>
+#include <cstdlib>
+#include <iostream>
+#include <mutex>
+#include <queue>
+#include <string>
+#include <thread>
+
+#include "Task3.h"
+
+typedef std::unique_lock<std::mutex> unique_mutex_lock;
+
+std::mutex mutex;
+std::condition_variable conditionVariable;
+bool threadFinished = false;
+bool flag = false;
+
+std::string ArrayToString(std::string *array, int32_t arrayLength)
+{
+    std::string result;
+    for (int32_t i = 0; i < arrayLength; i++)
+        result += array[i] + (i < arrayLength - 1 ? ", " : "");
+    return result;
+}
+
+template<typename T>
+void BubbleSort(T *array, int32_t arrayLength, int32_t(*comparsion)(T *left, T *right))
+{
+    for (int32_t j = 0; j < arrayLength; j++)
+    {
+        bool anySwaps = false;
+
+        unique_mutex_lock lock(mutex);
+        conditionVariable.wait(lock, []() { return !flag; });
+        for (int32_t i = 0; i < arrayLength - j - 1; i++)
+        {
+            if (comparsion(array + i, array + i + 1) > 0)
+                std::swap(array[i], array[i + 1]), anySwaps = true;
+        }
+        flag = true;
+        lock.unlock();
+        conditionVariable.notify_all();
+
+        if (!anySwaps)
+        {
+            threadFinished = true;
+            return;
+        }
+    }
+};
+
+std::vector<int32_t> CreateProductList()
+{
+    std::vector<int32_t> products;
+    int32_t productsCount = rand() % 32;
+    for (int32_t i = 0; i < productsCount; i++)
+        products.push_back(rand() % 16);
+    return products;
+}
+
+int32_t main()
+{
+    std::mutex stdOutMutex;
+    std::vector<CashDeskService *> services;
+
+    for (int32_t i = 0; i < 10; i++)
+    {
+        for (int32_t j = 0; j < services.size(); j++)
+        {
+            if (services[j]->IsDisposed())
+            {
+                services[j]->Stop();
+                delete services[j];
+                services.erase(services.begin() + j);
+                j--;
+
+                unique_mutex_lock stdOutLock(stdOutMutex);
+                std::cout << "Closed a cash desk service." << std::endl;
+                stdOutLock.unlock();
+            }
+        }
+
+        Customer *customer = new Customer(CreateProductList());
+
+        bool customerAddedToAnyService = false;
+        for (CashDeskService *service : services)
+        {
+            if (service->CanAddCustomer())
+            {
+                service->AddCustomer(customer);
+                customerAddedToAnyService = true;
+
+                unique_mutex_lock stdOutLock(stdOutMutex);
+                std::cout << "Added a customer to an existing cash desk service." << std::endl;
+                stdOutLock.unlock();
+
+                break;
+            }
+        }
+        if (!customerAddedToAnyService)
+        {
+            CashDeskService *service = new CashDeskService(&stdOutMutex);
+            service->AddCustomer(customer);
+            service->Start();
+            services.push_back(service);
+
+            unique_mutex_lock stdOutLock(stdOutMutex);
+            std::cout << "Created a new cash desk service and added a customer to it." << std::endl;
+            stdOutLock.unlock();
+        }
+
+        std::this_thread::sleep_for(std::chrono::milliseconds(rand() % 3000));
+    }
+
+    for (CashDeskService *service : services)
+    {
+        service->Stop();
+        delete service;
+    }
+}
+
+#endif // _TASK_3_MAIN_
