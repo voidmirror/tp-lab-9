@@ -1,7 +1,7 @@
 #include "task1.h"
 
 
-void main1()
+void main()
 {
 	vector<string> array_to_sort = { "me", "cool", "oohh", "all", "family", "summer", "not", "exh" };
 	vector<string> sorted_array;

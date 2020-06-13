@@ -1,6 +1,6 @@
 #include "task2.h"
 
-int main2()
+int main()
 {
 	vector<string> data_for_sort = { "me", "cool", "oohh", "all", "family", "summer", "not", "ex" };
 

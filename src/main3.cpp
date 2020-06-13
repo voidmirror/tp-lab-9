@@ -22,7 +22,7 @@ void Service(queue<vector<int>> buyers){
 	}
 }
 
-int main3(){
+int main(){
 	mt19937 gen(time(NULL));
 	queue<vector<int>> buyers;
 	vector<thread*> threads;
