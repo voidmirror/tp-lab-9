@@ -49,7 +49,8 @@ int main(int argc, char *argv[])
         });
     std::cout << std::endl;
 
-    std::cout << "Bubble sorting for input text from down to up by length:";
+    //1
+    std::cout << "Bubble sorting for input text from down to up (length):";
     bubble_sort<std::string>(phrases, [](string a, string b)
         {
             if (a.length() > b.length())
@@ -64,5 +65,69 @@ int main(int argc, char *argv[])
         });
     std::cout << std::endl;
 
+    //2
+    std::cout << "Bubble sorting for input text from up to down (length):";
+    bubble_sort<std::string>(phrases, [](std::string a, std::string b)
+        {
+            if (a.length() < b.length())
+                return true;
+            else
+                return false;
+        });
+    for_each(phrases.begin(), phrases.end(), [](std::string x)
+        {
+            std::cout << x << " ";
+        });
+    std::cout << std::endl;
+
+    //3
+    std::cout << "Bubble sorting for input text from up to down (cmp):";
+    bubble_sort<std::string>(phrases, [](std::string a, std::string b)
+        {
+        if (a < b)
+            return true;
+        else
+            return false;
+        });
+
+    for_each(phrases.begin(), phrases.end(), [](std::string x)
+        {
+        std::cout << x << " "; 
+        });
+    std::cout << std::endl;
+
+    //4
+    std::cout << "Bubble sorting for input text from down to up (cmp):";
+    bubble_sort<std::string>(phrases, [](std::string a, std::string b)
+        {
+        if (a > b)
+            return true;
+        else
+            return false;
+        });
+
+
+    for_each(phrases.begin(), phrases.end(), [](std::string x)
+        { 
+            std::cout << x << " "; 
+        });
+    std::cout << std::endl;
+
+    //5
+    cout << "Bubble sorting for input text from up to down (first letter):";
+    bubble_sort<std::string>(phrases, [](std::string a, std::string b)
+        {
+        if (a[0] < b[0])
+            return true;
+        else
+            return false;
+        });
+    for_each(phrases.begin(), phrases.end(), [](std::string x)
+        {
+        std::cout << x << " "; 
+        });
+
+
+    std::cout << std::endl;
     return EXIT_SUCCESS;
 }
