@@ -8,8 +8,9 @@
 #include <thread>
 #include <cstdlib>
 #include <ctime>
-#include <zconf.h>
+//#include <zconf.h>
 #include <queue>
+#include <mutex>
 
 using namespace std;
 
@@ -75,7 +76,7 @@ public:
 
 class Shop{
     vector<Cash*> cashmachines;
-    vector<thread> procs;
+    vector<thread*> procs;
     int ccs=1;
 public:
     Shop(){
@@ -93,7 +94,7 @@ public:
                     visited=true;
                     if(!cashmachines[i]->Status()){// dont make more threads
                         cashmachines[i]->switchActive();
-                        procs.push_back(thread(&Cash::Service,cashmachines[i]));
+                        procs.push_back(new thread(&Cash::Service,cashmachines[i]));
                     }
                     break;
                 }
@@ -104,11 +105,11 @@ public:
                 cashmachines.push_back(Cashtmp);
                 Cashtmp->AddCustomer(tmpC);
                 Cashtmp->switchActive();
-                procs.push_back(thread(&Cash::Service,Cashtmp));
+                procs.push_back(new thread(&Cash::Service,Cashtmp));
             }
         }
         EndofDay=true;
-        for (thread& t : procs) t.join();
+        for (auto& t : procs) t->join();
     };
 };
 
