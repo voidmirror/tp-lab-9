@@ -24,6 +24,11 @@ void sclient(std::queue<std::vector<int>> customers)
         mutex1.lock();
         std::cout << "Now on cashier person with " << customers.front().size() << " products in shopping basket" << " on " << std::this_thread::get_id() << " thread" << std::endl;
         mutex1.unlock();
+
+        for (int j(0); j < customers.front().size(); j++) 
+        {
+            std::this_thread::sleep_for(chrono::seconds(2));
+        }
         customers.pop();
 
     }
@@ -53,12 +58,12 @@ int main()
         }
         customers.push(products);
         products.clear();
-        if ((customers.size() % 5 == 0) || (i == customers_amount - 1))
-        {
-            threads.push_back(new thread(sclient, customers));
-            while (!customers.empty())
-                customers.pop();
-        }
+       // if ((customers.size() % 5 == 0) || (i == customers_amount - 1)) //dlya bolshego chem 5 posititeley
+       // {
+        threads.push_back(new thread(sclient, customers));
+        while (!customers.empty())
+             customers.pop();
+       // }
 
 
     }
