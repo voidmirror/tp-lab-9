@@ -24,16 +24,19 @@ void bubble_sort(std::vector<T>* seqc, std::function<bool(T, T)> comparator)
     std::mutex output_mutex;
     std::lock_guard<std::mutex> lock(output_mutex);
     bool srt = true;
+    int tmp = 0;
 
     for (unsigned int i = 0; i < seqc->size(); i++)
     {
-        std::thread inner_thread([&output_mutex](vector<T>* seqc)
+        std::thread inner_thread([&output_mutex, &tmp](vector<T>* seqc)
             {
             std::for_each((*seqc).begin(), (*seqc).end(), [](T x) 
                 { 
                     std::cout << x << " "; 
                 });
 
+            std::cout << "  " << tmp << "-th iteration" << std::endl;
+            tmp++;
             }, seqc);
         inner_thread.join();
 
@@ -58,6 +61,7 @@ int main(int argc, char* argv[]) {
         });
     std::cout << std::endl;
 
+    //1
     cout << "Bubble sorting for input text from up to down (cmp):";
     thread thread1(bubble_sort<std::string>, &phrases, [](std::string a, std::string b) 
         {
