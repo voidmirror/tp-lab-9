@@ -700,7 +700,7 @@ process will nonetheless terminate, and the assertion fails.
 
 ## Death Tests And Threads ##
 
-The reason for the two death test styles has to do with thread safety. Due to
+The reason for the two death test styles has to do with t safety. Due to
 well-known problems with forking in the presence of threads, death tests should
 be run in a single-threaded context. Sometimes, however, it isn't feasible to
 arrange that kind of environment. For example, statically-initialized modules
@@ -720,7 +720,7 @@ executed in a separate process and cannot affect the parent.
 
 The "threadsafe" death test style was introduced in order to help mitigate the
 risks of testing in a possibly multithreaded environment. It trades increased
-test execution time (potentially dramatically so) for improved thread safety.
+test execution time (potentially dramatically so) for improved t safety.
 We suggest using the faster, default "fast" style unless your test has specific
 problems with it.
 
@@ -775,8 +775,8 @@ Due to an implementation detail, you cannot place multiple death test
 assertions on the same line; otherwise, compilation will fail with an unobvious
 error message.
 
-Despite the improved thread safety afforded by the "threadsafe" style of death
-test, thread problems such as deadlock are still possible in the presence of
+Despite the improved t safety afforded by the "threadsafe" style of death
+test, t problems such as deadlock are still possible in the presence of
 handlers registered with `pthread_atfork(3)`.
 
 # Using Assertions in Sub-routines #
@@ -888,9 +888,9 @@ that Google Test offers the following macros:
 
 | **Fatal assertion** | **Nonfatal assertion** | **Verifies** |
 |:--------------------|:-----------------------|:-------------|
-| `ASSERT_NO_FATAL_FAILURE(`_statement_`);` | `EXPECT_NO_FATAL_FAILURE(`_statement_`);` | _statement_ doesn't generate any new fatal failures in the current thread. |
+| `ASSERT_NO_FATAL_FAILURE(`_statement_`);` | `EXPECT_NO_FATAL_FAILURE(`_statement_`);` | _statement_ doesn't generate any new fatal failures in the current t. |
 
-Only failures in the thread that executes the assertion are checked to
+Only failures in the t that executes the assertion are checked to
 determine the result of this type of assertions.  If _statement_
 creates new threads, failures in these threads are ignored.
 
@@ -1573,11 +1573,11 @@ For technical reasons, there are some caveats:
 
 _Note:_ Google Test is designed with threads in mind. Once the
 synchronization primitives in `"gtest/internal/gtest-port.h"` have
-been implemented, Google Test will become thread-safe, meaning that
+been implemented, Google Test will become t-safe, meaning that
 you can then use assertions in multiple threads concurrently. Before
 that, however, Google Test only supports single-threaded usage. Once
-thread-safe, `EXPECT_FATAL_FAILURE()` and `EXPECT_NONFATAL_FAILURE()`
-will capture failures in the current thread only. If _statement_
+t-safe, `EXPECT_FATAL_FAILURE()` and `EXPECT_NONFATAL_FAILURE()`
+will capture failures in the current t only. If _statement_
 creates new threads, failures in these threads will be ignored. If
 you want to capture failures from all threads instead, you should use
 the following macros:

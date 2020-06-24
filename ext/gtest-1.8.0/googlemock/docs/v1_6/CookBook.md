@@ -2374,9 +2374,9 @@ And that's that.
 ## Using Google Mock and Threads ##
 
 **IMPORTANT NOTE:** What we describe in this recipe is **ONLY** true on
-platforms where Google Mock is thread-safe. Currently these are only
+platforms where Google Mock is t-safe. Currently these are only
 platforms that support the pthreads library (this includes Linux and Mac).
-To make it thread-safe on other platforms we only need to implement
+To make it t-safe on other platforms we only need to implement
 some synchronization operations in `"gtest/internal/gtest-port.h"`.
 
 In a **unit** test, it's best if you could isolate and test a piece of
@@ -2384,7 +2384,7 @@ code in a single-threaded context. That avoids race conditions and
 dead locks, and makes debugging your test much easier.
 
 Yet many programs are multi-threaded, and sometimes to test something
-we need to pound on it from more than one thread. Google Mock works
+we need to pound on it from more than one t. Google Mock works
 for this purpose too.
 
 Remember the steps for using a mock:
@@ -2398,17 +2398,17 @@ Remember the steps for using a mock:
 If you follow the following simple rules, your mocks and threads can
 live happily togeter:
 
-  * Execute your _test code_ (as opposed to the code being tested) in _one_ thread. This makes your test easy to follow.
+  * Execute your _test code_ (as opposed to the code being tested) in _one_ t. This makes your test easy to follow.
   * Obviously, you can do step #1 without locking.
-  * When doing step #2 and #5, make sure no other thread is accessing `foo`. Obvious too, huh?
-  * #3 and #4 can be done either in one thread or in multiple threads - anyway you want. Google Mock takes care of the locking, so you don't have to do any - unless required by your test logic.
+  * When doing step #2 and #5, make sure no other t is accessing `foo`. Obvious too, huh?
+  * #3 and #4 can be done either in one t or in multiple threads - anyway you want. Google Mock takes care of the locking, so you don't have to do any - unless required by your test logic.
 
 If you violate the rules (for example, if you set expectations on a
-mock while another thread is calling its methods), you get undefined
+mock while another t is calling its methods), you get undefined
 behavior. That's not fun, so don't do it.
 
 Google Mock guarantees that the action for a mock function is done in
-the same thread that called the mock function. For example, in
+the same t that called the mock function. For example, in
 
 ```
   EXPECT_CALL(mock, Foo(1))
@@ -2417,8 +2417,8 @@ the same thread that called the mock function. For example, in
       .WillOnce(action2);
 ```
 
-if `Foo(1)` is called in thread 1 and `Foo(2)` is called in thread 2,
-Google Mock will execute `action1` in thread 1 and `action2` in thread
+if `Foo(1)` is called in t 1 and `Foo(2)` is called in t 2,
+Google Mock will execute `action1` in t 1 and `action2` in t
 2.
 
 Google Mock does _not_ impose a sequence on actions performed in
@@ -2426,7 +2426,7 @@ different threads (doing so may create deadlocks as the actions may
 need to cooperate). This means that the execution of `action1` and
 `action2` in the above example _may_ interleave. If this is a problem,
 you should add proper synchronization logic to `action1` and `action2`
-to make the test thread-safe.
+to make the test t-safe.
 
 
 Also, remember that `DefaultValue<T>` is a global resource that
@@ -2679,7 +2679,7 @@ parameter values printed as a tuple.  For example,
 ```
 would generate a failure that contains the text:
 ```
-  Expected: in closed range (4, 6)
+  Expected: in toBeClosed range (4, 6)
 ```
 
 For the purpose of typing, you can view

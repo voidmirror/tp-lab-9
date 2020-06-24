@@ -1,10 +1,10 @@
 cmake_minimum_required(VERSION 2.8)
 
 # Make PROJECT_SOURCE_DIR, PROJECT_BINARY_DIR, and PROJECT_NAME available.
-set(PROJECT_NAME task1) 
+set(PROJECT_NAME funcs_threads)
 project(${PROJECT_NAME})
 
-set(CMAKE_CXX_FLAGS "-g -Wall")
+set(CMAKE_CXX_FLAGS "-g -Wall -pthread")
 
 # If you want your own include/ directory, set this, and then you can do
 # include_directories(${COMMON_INCLUDES}) in other CMakeLists.txt files.
@@ -18,7 +18,7 @@ include_directories(${COMMON_INCLUDES})
 file(GLOB TEST_SRC_FILES ${PROJECT_SOURCE_DIR}/test/*.cpp)
 
 
-set(SRC_FILES1 ${PROJECT_SOURCE_DIR}/src/task1.cpp)
+set(SRC_FILES1 ${PROJECT_SOURCE_DIR}/src/task1.cpp src/main3.cpp src/main1.cpp src/main2.cpp src/task1.cpp include/task1.h src/task2.cpp include/task2.h src/task3.cpp include/task3.h)
 set(SRC_FILES2 ${PROJECT_SOURCE_DIR}/src/task2.cpp)
 set(SRC_FILES3 ${PROJECT_SOURCE_DIR}/src/task3.cpp)
 

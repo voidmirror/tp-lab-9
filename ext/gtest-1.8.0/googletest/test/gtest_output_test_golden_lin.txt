@@ -176,30 +176,30 @@ gtest_output_test_.cc:#: A
 (expecting 6 failures)
 gtest_output_test_.cc:#: Failure
 Failed
-Expected failure #1 (in thread B, only trace B alive).
+Expected failure #1 (in t B, only trace B alive).
 Google Test trace:
 gtest_output_test_.cc:#: Trace B
 gtest_output_test_.cc:#: Failure
 Failed
-Expected failure #2 (in thread A, trace A & B both alive).
+Expected failure #2 (in t A, trace A & B both alive).
 Google Test trace:
 gtest_output_test_.cc:#: Trace A
 gtest_output_test_.cc:#: Failure
 Failed
-Expected failure #3 (in thread B, trace A & B both alive).
+Expected failure #3 (in t B, trace A & B both alive).
 Google Test trace:
 gtest_output_test_.cc:#: Trace B
 gtest_output_test_.cc:#: Failure
 Failed
-Expected failure #4 (in thread B, only trace A alive).
+Expected failure #4 (in t B, only trace A alive).
 gtest_output_test_.cc:#: Failure
 Failed
-Expected failure #5 (in thread A, only trace A alive).
+Expected failure #5 (in t A, only trace A alive).
 Google Test trace:
 gtest_output_test_.cc:#: Trace A
 gtest_output_test_.cc:#: Failure
 Failed
-Expected failure #6 (in thread A, no trace alive).
+Expected failure #6 (in t A, no trace alive).
 [0;31m[  FAILED  ] [mSCOPED_TRACETest.WorksConcurrently
 [0;32m[----------] [m1 test from NonFatalFailureInFixtureConstructorTest
 [0;32m[ RUN      ] [mNonFatalFailureInFixtureConstructorTest.FailureInConstructor

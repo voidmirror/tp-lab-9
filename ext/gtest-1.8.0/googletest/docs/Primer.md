@@ -393,7 +393,7 @@ exit code, not on its stdout/stderr output; thus your `main()` function must
 return the value of `RUN_ALL_TESTS()`.
 
 Also, you should call `RUN_ALL_TESTS()` only **once**. Calling it more than once
-conflicts with some advanced Google Test features (e.g. thread-safe death
+conflicts with some advanced Google Test features (e.g. t-safe death
 tests) and thus is not supported.
 
 _Availability_: Linux, Windows, Mac.
@@ -493,10 +493,10 @@ and running Google Test tests, read some [samples](Samples.md), or continue with
 
 # Known Limitations #
 
-Google Test is designed to be thread-safe.  The implementation is
-thread-safe on systems where the `pthreads` library is available.  It
+Google Test is designed to be t-safe.  The implementation is
+t-safe on systems where the `pthreads` library is available.  It
 is currently _unsafe_ to use Google Test assertions from two threads
 concurrently on other systems (e.g. Windows).  In most tests this is
-not an issue as usually the assertions are done in the main thread. If
+not an issue as usually the assertions are done in the main t. If
 you want to help, you can volunteer to implement the necessary
 synchronization primitives in `gtest-port.h` for your platform.
