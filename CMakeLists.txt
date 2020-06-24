@@ -23,16 +23,12 @@ set(SRC_FILES2 ${PROJECT_SOURCE_DIR}/src/task2.cpp)
 set(SRC_FILES3 ${PROJECT_SOURCE_DIR}/src/task3.cpp)
 
 
-set(CMAKE_CXX_STANDARD 11)
-
-add_library(task1_lib ${SRC_FILES1})
-add_library(task2_lib ${SRC_FILES2})
-add_library(task3_lib ${SRC_FILES3})
+set(CMAKE_CXX_STANDARD 14)
 
 
-add_executable(task1 ${PROJECT_SOURCE_DIR}/src/main1.cpp)
-add_executable(task2 ${PROJECT_SOURCE_DIR}/src/main2.cpp)
-add_executable(task3 ${PROJECT_SOURCE_DIR}/src/main3.cpp)
+add_executable(task1 ${PROJECT_SOURCE_DIR}/src/task1.cpp)
+add_executable(task2 ${PROJECT_SOURCE_DIR}/src/task2.cpp)
+add_executable(task3 ${PROJECT_SOURCE_DIR}/src/task3.cpp)
 
 target_link_libraries(task1 task1_lib)
 target_link_libraries(task2 task2_lib)
