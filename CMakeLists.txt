@@ -23,7 +23,7 @@ set(SRC_FILES2 ${PROJECT_SOURCE_DIR}/src/task2.cpp)
 set(SRC_FILES3 ${PROJECT_SOURCE_DIR}/src/task3.cpp)
 
 
-set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD 14)
 
 add_library(task1_lib ${SRC_FILES1})
 add_library(task2_lib ${SRC_FILES2})
