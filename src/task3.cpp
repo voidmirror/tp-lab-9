@@ -54,9 +54,11 @@ int main() {
 		if (queue.size() % maxQueueLength == 0 || i == customerNum - 1) {
 			n = threads.size();
 			threads.push_back(new std::thread(service, queue, n));
+			//mutex.lock();
 			while (!queue.empty()) {
 				queue.pop();
 			}
+			//mutex.unlock();
 		}
 	}
 
